@@ -23,3 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('register', [AuthController::class,'register'] );
 Route::post('login', [AuthController::class,'login'] );
 Route::get('todo', [TodoController::class,'index'] );
+Route::get('test', function (){
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Todo Tested successfully',
+    ]);
+} );

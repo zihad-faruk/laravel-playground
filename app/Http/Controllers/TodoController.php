@@ -79,4 +79,11 @@ class TodoController extends Controller
             'todo' => $todo,
         ]);
     }
+
+    public function test(){
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Todo Tested successfully',
+        ]);
+    }
 }
