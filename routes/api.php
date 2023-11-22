@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\SocialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,13 @@ use App\Http\Controllers\TodoController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Google Auth
+Route::post('/provider/login', [SocialiteController::class, 'loginWithGoogle']);
+
+// Dummy Purpose
+Route::get('/token/{provider}', [SocialiteController::class, 'redirectToProvider']);
+Route::get('/login/{provider}/callback', [SocialiteController::class, 'handleProviderCallback'])
 
 Route::post('register', [AuthController::class,'register'] );
 Route::post('login', [AuthController::class,'login'] );
