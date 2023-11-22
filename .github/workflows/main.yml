@@ -8,7 +8,9 @@ on:
 
 jobs:
   laravel:
+    
     runs-on: ubuntu-latest
+
     steps:
     - name: Setup PHP env using setup-php
     - uses: shivammathur/setup-php@2.27.1
