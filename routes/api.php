@@ -22,11 +22,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Google Auth
-Route::post('/provider/login', [SocialiteController::class, 'loginWithGoogle']);
+Route::post('/provider/login', [SocialController::class, 'loginWithGoogle']);
 
 // Dummy Purpose
-Route::get('/token/{provider}', [SocialiteController::class, 'redirectToProvider']);
-Route::get('/login/{provider}/callback', [SocialiteController::class, 'handleProviderCallback'])
+Route::get('/token/{provider}', [SocialController::class, 'redirectToProvider']);
+Route::get('/login/{provider}/callback', [SocialController::class, 'handleProviderCallback']);
 
 Route::post('register', [AuthController::class,'register'] );
 Route::post('login', [AuthController::class,'login'] );

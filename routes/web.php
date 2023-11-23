@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('auth/google', [SocialController::class, 'googleRedirect']);
-//Route::get('auth/google/callback', [SocialController::class, 'googleLoginOrRegister']);
+Route::get('auth/google', function (){
+    return view('auth.google-login');
+});
+Route::get('auth/google/callback', [SocialController::class, 'googleLoginOrRegister']);
