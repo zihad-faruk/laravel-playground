@@ -28,7 +28,6 @@
     <!--===============================================================================================-->
 </head>
 <body>
-
 <div class="limiter">
     <div class="container-login100" style="background-image: {{asset('assets/images/bg-01.jpg')}};">
         <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
