@@ -21,6 +21,4 @@ Route::get('/', function () {
 Route::get('auth/google', function (){
     return view('auth.google-login');
 });
-
-
 Route::get('auth/google/callback', [SocialController::class, 'googleLoginOrRegister']);
